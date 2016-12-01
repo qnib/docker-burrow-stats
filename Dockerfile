@@ -24,3 +24,4 @@ ADD etc/consul-templates/burrow-stats/configs.json.ctmpl \
     /etc/consul-templates/burrow-stats/
 ADD etc/supervisord.d/burrow-stats.ini /etc/supervisord.d/
 ADD opt/qnib/burrow-stats/bin/start.sh /opt/qnib/burrow-stats/bin/
+ADD etc/consul.d/burrow-stats.json /etc/consul.d/

@@ -1,0 +1,16 @@
+{
+  "services": [
+    {
+        "id": "burrow-stats",
+        "name": "burrow-stats",
+        "tags": [],
+        "port": 8031,
+        "checks": [
+            {
+               "script": "nmap localhost -p 8031",
+               "interval": "5s"
+            }
+       ]
+    }
+  ]
+}
