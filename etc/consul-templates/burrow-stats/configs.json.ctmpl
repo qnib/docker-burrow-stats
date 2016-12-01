@@ -1,0 +1,21 @@
+{
+  "consumers": [
+    {
+      "name": "consumer_name_2",
+      "status": "http://{{ env "BURROW_HOST" }}:8000/v2/kafka/{{ env "BURROW_CLUSTER_NAME" }}/consumer/{{ env "BURROW_CONSUMER_NAME" }}/status",
+      "consumer_group_offset": "http://{{ env "BURROW_HOST" }}:8000/v2/kafka/{{ env "BURROW_CLUSTER_NAME" }}/consumer/{{ env "BURROW_CONSUMER_NAME" }}/topic/{{ env "BURROW_TOPIC_NAME" }}",
+      "topic_offset": "http://{{ env "BURROW_HOST" }}:8000/v2/kafka/{{ env "BURROW_CLUSTER_NAME" }}/topic/{{ env "BURROW_TOPIC_NAME" }}"
+    }
+  ],
+  "chartOptions": {
+    "scaleOverride": false,
+    "scaleFontSize": 14,
+    "scaleSteps": null,
+    "scaleStepWidth": null,
+    "scaleStartValue": null
+  },
+  "burrowStatsOptions": {
+    "pollInterval": {{ env "BURROW_POLL_INTERVAL" }},
+    "cacheBinSize": 30
+  }
+}
